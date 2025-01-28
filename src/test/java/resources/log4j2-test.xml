@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="TestConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %c - %msg%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <Filters>
+                <RegexFilter regex="(?i).*\\bSELECT\\b.*" onMatch="DENY" onMismatch="ACCEPT"/>
+            </Filters>
+            <AppenderRef ref="TestConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
+gi
